@@ -58,3 +58,16 @@ public:
 
     char getNombre() const;
 };
+
+class Trayectoria : private Movimiento
+{
+    QPainter *painter;
+
+public:
+    QRectF boundingRect() const;
+        void paint(QPainter *painter,
+             const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr);
+};
+
+#endif // MOVIMIENTO_H
+
